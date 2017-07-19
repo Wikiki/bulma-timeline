@@ -8,22 +8,24 @@ Preview
 Usage
 ---
 
-```<div class="timeline">
+```
+<div class="timeline">
   <div class="timeline-item" id="timeline-example-1">
     <div class="timeline-left icon-lg">
       <a href="#timeline-example-1" class="timeline-icon"></a>
     </div>
     <div class="timeline-content">
-      <div class="tile">
-        <div class="tile-content">
-          <p class="tile-subtitle">March 2017</p>
-          <p class="tile-title"><a href="elements.html#icons">Icons</a>: single-element, responsive and pure CSS icons</p>
-          <p class="tile-title"><a href="components.html#popovers">Popovers</a>: small overlay content containers</p>
-          <p class="tile-title"><a href="experimentals.html#calendars">Calendars</a>: date or date range picker and events display</p>
-          <p class="tile-title"><a href="experimentals.html#carousels">Carousels</a>: slideshows for cycling images</p>
-        </div>
-        <div class="tile-action">
-          <button class="button">View</button>
+      <div class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <div>
+              <p class="heading">January 2017</p>
+              <p>Timeline content - Can include any HTML element</p>
+            </div>
+          </div>
+          <div class="level-right">
+            <p class="level-item"><button class="button is-primary is-small">View</button></p>
+          </div>
         </div>
       </div>
     </div>
@@ -35,16 +37,17 @@ Usage
         </a>
     </div>
     <div class="timeline-content">
-      <div class="tile">
-        <div class="tile-content">
-          <p class="tile-subtitle">February 2017</p>
-          <p class="tile-title">New Documents experience</p>
-          <p class="tile-title"><a href="components.html#bars">Bars</a>: represent the progress of a task</p>
-          <p class="tile-title"><a href="components.html#steps">Steps</a>: progress indicators of a sequence of task steps</p>
-          <p class="tile-title"><a href="components.html#tiles">Tiles</a>: repeatable or embeddable information blocks</p>
-        </div>
-        <div class="tile-action">
-          <button class="button">View</button>
+      <div class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <div>
+              <p class="heading">February 2017</p>
+              <p>Timeline content - Can include any HTML element</p>
+            </div>
+          </div>
+          <div class="level-right">
+            <p class="level-item"><button class="button is-primary is-small">View</button></p>
+          </div>
         </div>
       </div>
     </div>
@@ -56,18 +59,18 @@ Usage
         </a>
     </div>
     <div class="timeline-content">
-      <div class="tile">
-        <div class="tile-content">
-          <p class="tile-subtitle">March 2017</p>
-          <p class="tile-title"><a href="elements.html#icons">Icons</a>: single-element, responsive and pure CSS icons</p>
-          <p class="tile-title"><a href="components.html#popovers">Popovers</a>: small overlay content containers</p>
-          <p class="tile-title"><a href="experimentals.html#calendars">Calendars</a>: date or date range picker and events display</p>
-          <p class="tile-title"><a href="experimentals.html#carousels">Carousels</a>: slideshows for cycling images</p>
-        </div>
-        <div class="tile-action">
-          <button class="button">View</button>
+      <div class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <div>
+              <p class="heading">March 2017</p>
+              <p>Timeline content - Can include any HTML element</p>
+            </div>
+          </div>
+          <div class="level-right">
+            <p class="level-item"><button class="button is-primary is-small">View</button></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
