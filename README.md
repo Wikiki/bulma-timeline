@@ -8,7 +8,7 @@ Preview
 Usage
 ---
 
-```
+```html
 <div class="timeline">
   <div class="timeline-item" id="timeline-example-1">
     <div class="timeline-left icon-lg">
