@@ -74,11 +74,10 @@ Usage
       </div>
     </div>
   </div>
-  `
-  ``
+  ```
   
-  Integration
-  ---
+Integration
+---
 - Clone the [bulma repo](https://github.com/jgthms/bulma)
 - Under the `sass` folder, create a new folder called `extensions`
 - In this new folder, create a new file `timeline.sass`
