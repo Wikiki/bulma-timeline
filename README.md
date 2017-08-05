@@ -75,7 +75,11 @@ Usage
     </div>
   </div>
 ```
-  
+
+Demo
+---
+You can find a demo [here](!https://codepen.io/anon/pen/MvJKrR)
+
 Integration
 ---
 - Clone the [bulma repo](https://github.com/jgthms/bulma)
