@@ -74,7 +74,7 @@ Usage
       </div>
     </div>
   </div>
-  ```
+```
   
 Integration
 ---
