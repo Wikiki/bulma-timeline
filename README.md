@@ -74,3 +74,19 @@ Usage
       </div>
     </div>
   </div>
+  
+  Integration
+  ---
+- Clone the [bulma repo](https://github.com/jgthms/bulma)
+- Under the `sass` folder, create a new folder called `extensions`
+- In this new folder, create a new file `timeline.sass`
+- Copy the code form the `bulma-timelin repo`'s [timeline.sass](https://github.com/Wikiki/bulma-timeline/blob/master/timeline.sass) file into your new file
+- In the same folder create a new file `_all.sass` (this is not required, but will help when you add more extensions)
+- In this file add this code:
+```
+@charset "utf-8"
+@import "timeline.sass"
+```
+At the end of the `bulma.sass` file, add this line: `@import "sass/extensions/_all"`
+
+Now, you can just build the bulma project with `npm run build`, and the output will be available in the `css folder`.
