@@ -78,7 +78,7 @@ Usage
 
 Demo
 ---
-You can find a demo [here](!https://codepen.io/anon/pen/MvJKrR)
+You can find a demo [here](https://codepen.io/anon/pen/MvJKrR)
 
 Integration
 ---
