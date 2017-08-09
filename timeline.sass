@@ -2,6 +2,7 @@ $timeline-icon-border-radius: .5rem !default
 $timeline-line-color: $grey-lighter !default
 $timeline-line-width: .2rem !default
 $timeline-content-padding: .2rem 0 .2rem 1.5rem !default
+$timeline-icon-size: $size-5 !default
 
 .timeline
   .timeline-item
@@ -55,8 +56,8 @@ $timeline-content-padding: .2rem 0 .2rem 1.5rem !default
         &::before
           content: none
         .icon
-          font-size: $size-5 !important
-          line-height: $size-5 !important
+          font-size: $timeline-icon-size !important
+          line-height: $timeline-icon-size !important
 
     @each $name, $pair in $colors
       $color: nth($pair, 1)

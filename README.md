@@ -85,6 +85,7 @@ $timeline-icon-border-radius | Define the icon (on left) border radius. This all
 $timeline-line-color | Color of line in background of icons | $grey-lighter    
 $timeline-line-width | Width of line in background of icons | .2rem        
 $timeline-content-padding | Padding for item content | .2rem 0 .2rem 1.5rem
+$timeline-icon-size | Icon size of a timeline item | $size-5
 
 Demo
 ---
