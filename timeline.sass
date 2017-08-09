@@ -1,3 +1,7 @@
+$timeline-line-color: #f0f1f4 !default
+$timeline-line-width: .2rem !default
+$timeline-content-padding: .2rem 0 .2rem 1.5rem !default
+
 .timeline
   .timeline-item
     display: flex
@@ -6,13 +10,13 @@
     margin-bottom: 2.4rem
     position: relative
     &::before
-      background: #f0f1f4
+      background: $timeline-line-color
       content: ""
       height: 100%
       left: 1.1rem
       position: absolute
       top: 2.4rem
-      width: .2rem
+      width: $timeline-line-width
 
     .timeline-left
       -webkit-flex: 0 0 auto
@@ -23,10 +27,10 @@
       -webkit-flex: 1 1 auto
       -ms-flex: 1 1 auto
       flex: 1 1 auto
-      padding: .2rem 0 .2rem 1.5rem
+      padding: $timeline-content-padding
 
     .timeline-icon
-      border-radius: 50%
+      border-radius: 100%
       color: #fff
       display: block
       height: 2.4rem
@@ -45,9 +49,10 @@
       .icon
         height: 100%
         width: 100%
-      &.icon-lg
+      &.is-icon-large
         background: $primary
-        font-size: 1.6rem
-        line-height: 2rem
         &::before
           content: none
+        .icon
+          font-size: $size-5 !important
+          line-height: $size-5 !important
