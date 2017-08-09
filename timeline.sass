@@ -1,3 +1,4 @@
+$timeline-icon-border-radius: .5rem
 $timeline-line-color: #f0f1f4 !default
 $timeline-line-width: .2rem !default
 $timeline-content-padding: .2rem 0 .2rem 1.5rem !default
@@ -30,7 +31,7 @@ $timeline-content-padding: .2rem 0 .2rem 1.5rem !default
       padding: $timeline-content-padding
 
     .timeline-icon
-      border-radius: 100%
+      border-radius: $timeline-icon-border-radius
       color: #fff
       display: block
       height: 2.4rem
@@ -38,7 +39,7 @@ $timeline-content-padding: .2rem 0 .2rem 1.5rem !default
       width: 2.4rem
       &::before
         border: .2rem solid $primary
-        border-radius: 50%
+        border-radius: $timeline-icon-border-radius
         content: ""
         display: block
         height: .8rem
@@ -62,7 +63,9 @@ $timeline-content-padding: .2rem 0 .2rem 1.5rem !default
       $color-invert: nth($pair, 2)
       &.is-timeline-item-#{$name}
         .timeline-icon
+          &.is-icon-large
+            background: $color
           &::before
-            border: .2rem solid $color
+            border: .2rem solid $color !important
           .icon
             color: $color-invert
