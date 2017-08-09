@@ -1,5 +1,5 @@
 # bulma-timeline
-Bulma's extension to display a timeline
+Bulma's extension to display a timeline (find all my bulma's extensions [here](https://github.com/Wikiki/bulma-extensions))
 
 <img src="https://img4.hostingpics.net/pics/590414ScreenShot20170809at190601.png" width="50%">
 
