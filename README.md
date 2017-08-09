@@ -8,15 +8,6 @@ Preview
 
 Usage
 ---
-This extension uses Bulma's color modifiers and have the following variables
-
-Name | Description | Default value    
------|-------------|---------------
-$timeline-icon-border-radius | Define the icon (on left) border radius. This allow you do create a square or rounded timeline item icon | .5rem        
-$timeline-line-color | Color of line in background of icons | $grey-lighter    
-$timeline-line-width | Width of line in background of icons | .2rem        
-$timeline-content-padding | Padding for item content | .2rem 0 .2rem 1.5rem
-
 
 ```html
 <div class="timeline">
@@ -86,6 +77,17 @@ $timeline-content-padding | Padding for item content | .2rem 0 .2rem 1.5rem
   </div>
 </div>
 ```
+
+Variables
+---
+This extension uses Bulma's color modifiers and have the following variables
+
+Name | Description | Default value    
+-----|-------------|---------------
+$timeline-icon-border-radius | Define the icon (on left) border radius. This allow you do create a square or rounded timeline item icon | .5rem        
+$timeline-line-color | Color of line in background of icons | $grey-lighter    
+$timeline-line-width | Width of line in background of icons | .2rem        
+$timeline-content-padding | Padding for item content | .2rem 0 .2rem 1.5rem
 
 Demo
 ---
