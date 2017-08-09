@@ -19,8 +19,8 @@ $timeline-content-padding | Padding for item content | .2rem 0 .2rem 1.5rem
 
 ```html
 <div class="timeline">
-  <div class="timeline-item" id="timeline-example-1">
-    <div class="timeline-left icon-lg">
+  <div class="timeline-item is-timeline-item-warning" id="timeline-example-1">
+    <div class="timeline-left is-icon-large">
       <a href="#timeline-example-1" class="timeline-icon"></a>
     </div>
     <div class="timeline-content">
@@ -39,11 +39,11 @@ $timeline-content-padding | Padding for item content | .2rem 0 .2rem 1.5rem
       </div>
     </div>
   </div>
-  <div class="timeline-item" id="timeline-example-2">
+  <div class="timeline-item is-timeline-item-danger" id="timeline-example-2">
     <div class="timeline-left">
-      <a href="#timeline-example-2" class="timeline-icon icon-lg">
-          <i class="icon fa fa-check"></i>
-        </a>
+      <a href="#timeline-example-2" class="timeline-icon is-icon-large">
+        <i class="icon fa fa-check"></i>
+      </a>
     </div>
     <div class="timeline-content">
       <div class="level">
@@ -63,9 +63,9 @@ $timeline-content-padding | Padding for item content | .2rem 0 .2rem 1.5rem
   </div>
   <div class="timeline-item" id="timeline-example-3">
     <div class="timeline-left">
-      <a href="#timeline-example-3" class="timeline-icon icon-lg">
-          <i class="icon fa fa-check"></i>
-        </a>
+      <a href="#timeline-example-3" class="timeline-icon is-icon-large">
+        <i class="icon fa fa-check"></i>
+      </a>
     </div>
     <div class="timeline-content">
       <div class="level">
@@ -83,11 +83,12 @@ $timeline-content-padding | Padding for item content | .2rem 0 .2rem 1.5rem
       </div>
     </div>
   </div>
+</div>
 ```
 
 Demo
 ---
-You can find a demo [here](https://codepen.io/anon/pen/MvJKrR)
+You can find a demo [here](https://codepen.io/wikiki/pen/zdwjqL)
 
 Integration
 ---
