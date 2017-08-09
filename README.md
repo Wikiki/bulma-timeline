@@ -3,7 +3,7 @@ Bulma's extension to display a timeline
 
 Preview
 ---
-![Timeline Component](https://img15.hostingpics.net/pics/440691ScreenShot20170719at120241.png)
+![Timeline Component](https://img4.hostingpics.net/pics/590414ScreenShot20170809at190601.png)
 
 Usage
 ---
