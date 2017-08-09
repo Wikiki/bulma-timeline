@@ -56,3 +56,13 @@ $timeline-content-padding: .2rem 0 .2rem 1.5rem !default
         .icon
           font-size: $size-5 !important
           line-height: $size-5 !important
+
+    @each $name, $pair in $colors
+      $color: nth($pair, 1)
+      $color-invert: nth($pair, 2)
+      &.is-timeline-item-#{$name}
+        .timeline-icon
+          &::before
+            border: .2rem solid $color
+          .icon
+            color: $color-invert
