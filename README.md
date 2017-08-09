@@ -1,10 +1,7 @@
 # bulma-timeline
 Bulma's extension to display a timeline
 
-Preview
----
 <img src="https://img4.hostingpics.net/pics/590414ScreenShot20170809at190601.png" width="50%">
-
 
 Usage
 ---
