@@ -61,7 +61,7 @@ $timeline-content-padding: .2rem 0 .2rem 1.5rem !default
     @each $name, $pair in $colors
       $color: nth($pair, 1)
       $color-invert: nth($pair, 2)
-      &.is-timeline-item-#{$name}
+      &.is-#{$name}
         .timeline-icon
           &.is-icon-large
             background: $color

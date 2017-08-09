@@ -8,7 +8,7 @@ Usage
 
 ```html
 <div class="timeline">
-  <div class="timeline-item is-timeline-item-warning" id="timeline-example-1">
+  <div class="timeline-item is-warning" id="timeline-example-1">
     <div class="timeline-left is-icon-large">
       <a href="#timeline-example-1" class="timeline-icon"></a>
     </div>
@@ -28,7 +28,7 @@ Usage
       </div>
     </div>
   </div>
-  <div class="timeline-item is-timeline-item-danger" id="timeline-example-2">
+  <div class="timeline-item is-danger" id="timeline-example-2">
     <div class="timeline-left">
       <a href="#timeline-example-2" class="timeline-icon is-icon-large">
         <i class="icon fa fa-check"></i>
