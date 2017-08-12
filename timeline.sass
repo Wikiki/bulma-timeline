@@ -1,72 +1,61 @@
-$timeline-icon-border-radius: .5rem !default
-$timeline-line-color: $grey-lighter !default
-$timeline-line-width: .2rem !default
-$timeline-content-padding: .2rem 0 .2rem 1.5rem !default
+$timeline-tag-background-color: $white !default
+$timeline-tag-border: .1em solid $grey-light !default
+$timeline-line: .1rem solid $grey-light !default
+$timeline-content-padding: 1em 0 0 2em !default
 $timeline-icon-size: $size-5 !default
 
 .timeline
+  .timeline-header
+    width: 6em
+    text-align: center
   .timeline-item
     display: flex
     display: -ms-flexbox
     display: -webkit-flex
-    margin-bottom: 2.4rem
     position: relative
+    border-left: $timeline-line
+    margin-left: 3em
+    padding-bottom: 2em
     &::before
-      background: $timeline-line-color
+      background: $timeline-tag-background-color
+      border: $timeline-tag-border
+      border-radius: 100%
       content: ""
-      height: 100%
-      left: 1.1rem
-      position: absolute
-      top: 2.4rem
-      width: $timeline-line-width
-
-    .timeline-left
-      -webkit-flex: 0 0 auto
-      -ms-flex: 0 0 auto
-      flex: 0 0 auto
-
-    .timeline-content
-      -webkit-flex: 1 1 auto
-      -ms-flex: 1 1 auto
-      flex: 1 1 auto
-      padding: $timeline-content-padding
-
-    .timeline-icon
-      border-radius: $timeline-icon-border-radius
-      color: #fff
       display: block
-      height: 2.4rem
-      text-align: center
-      width: 2.4rem
-      &::before
-        border: .2rem solid $primary
-        border-radius: $timeline-icon-border-radius
-        content: ""
+      height: .8rem
+      left: -.45em
+      position: absolute
+      top: 1.2rem
+      width: .8rem
+
+    .timeline-tag
+      position: absolute
+      width: .8em
+      left: -.4em
+      height: .8em
+      top: 1.2em
+      .image
+        width: 32px
+        height: 32px
+        left: -12px
+        background: $timeline-tag-background-color
+        border: $timeline-tag-border
+        border-radius: 100%
         display: block
-        height: .8rem
-        left: .8rem
-        position: absolute
-        top: .8rem
-        width: .8rem
-      .icon
-        height: 100%
-        width: 100%
-      &.is-icon-large
-        background: $primary
-        &::before
-          content: none
-        .icon
-          font-size: $timeline-icon-size !important
-          line-height: $timeline-icon-size !important
+        overflow: hidden
+    .timeline-content
+      padding: 1em 0 0 .5em
+      padding: $timeline-content-padding
+      .heading
+        font-weight: $weight-semibold
 
     @each $name, $pair in $colors
       $color: nth($pair, 1)
       $color-invert: nth($pair, 2)
       &.is-#{$name}
-        .timeline-icon
-          &.is-icon-large
-            background: $color
-          &::before
-            border: .2rem solid $color !important
-          .icon
-            color: $color-invert
+        border-left-color: $color
+        &::before
+          border-color: $color !important
+        .timeline-tag
+          .image
+            border-color: $color !important

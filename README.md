@@ -1,78 +1,47 @@
 # bulma-timeline
 Bulma's extension to display a timeline (find all my bulma's extensions [here](https://github.com/Wikiki/bulma-extensions))
 
-<img src="https://img4.hostingpics.net/pics/590414ScreenShot20170809at190601.png" width="50%">
+<img src="https://img4.hostingpics.net/pics/887099ScreenShot20170812at150229.png" width="50%">
 
 Usage
 ---
 
 ```html
-<div class="timeline">
-  <div class="timeline-item is-warning" id="timeline-example-1">
-    <div class="timeline-left is-icon-large">
-      <a href="#timeline-example-1" class="timeline-icon"></a>
+<ul class="timeline">
+  <li class="timeline-header">
+    <span class="button is-primary">Start</span>
+  </li>
+  <li class="timeline-item is-warning">
+    <div class="timeline-tag"></div>
+    <div class="timeline-content">
+      <p class="heading">January 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-item is-danger">
+    <div class="timeline-tag is-icon">
+      <figure class="image is-32x32">
+        <img src="http://bulma.io/images/placeholders/32x32.png">
+      </figure>
     </div>
     <div class="timeline-content">
-      <div class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <div>
-              <p class="heading">January 2017</p>
-              <p>Timeline content - Can include any HTML element</p>
-            </div>
-          </div>
-          <div class="level-right">
-            <p class="level-item"><button class="button is-primary is-small">View</button></p>
-          </div>
-        </div>
-      </div>
+      <p class="heading">February 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
     </div>
-  </div>
-  <div class="timeline-item is-danger" id="timeline-example-2">
-    <div class="timeline-left">
-      <a href="#timeline-example-2" class="timeline-icon is-icon-large">
-        <i class="icon fa fa-check"></i>
-      </a>
-    </div>
+  </li>
+  <li class="timeline-header">
+    <span class="button is-primary">2017</span>
+  </li>
+  <li class="timeline-item">
     <div class="timeline-content">
-      <div class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <div>
-              <p class="heading">February 2017</p>
-              <p>Timeline content - Can include any HTML element</p>
-            </div>
-          </div>
-          <div class="level-right">
-            <p class="level-item"><button class="button is-primary is-small">View</button></p>
-          </div>
-        </div>
-      </div>
+      <p class="heading">March 2017</p>
+      <p>Timeline content - Can include any HTML element</p>
     </div>
-  </div>
-  <div class="timeline-item" id="timeline-example-3">
-    <div class="timeline-left">
-      <a href="#timeline-example-3" class="timeline-icon is-icon-large">
-        <i class="icon fa fa-check"></i>
-      </a>
-    </div>
-    <div class="timeline-content">
-      <div class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <div>
-              <p class="heading">March 2017</p>
-              <p>Timeline content - Can include any HTML element</p>
-            </div>
-          </div>
-          <div class="level-right">
-            <p class="level-item"><button class="button is-primary is-small">View</button></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  </li>
+  <li class="timeline-header">
+    <span class="button is-primary">End</span>
+  </li>
+</ul>
 ```
 
 Variables
@@ -81,11 +50,10 @@ This extension uses Bulma's color modifiers and have the following variables
 
 Name | Description | Default value    
 -----|-------------|---------------
-$timeline-icon-border-radius | Define the icon (on left) border radius. This allow you do create a square or rounded timeline item icon | .5rem        
-$timeline-line-color | Color of line in background of icons | $grey-lighter    
-$timeline-line-width | Width of line in background of icons | .2rem        
-$timeline-content-padding | Padding for item content | .2rem 0 .2rem 1.5rem
-$timeline-icon-size | Icon size of a timeline item | $size-5
+$timeline-tag-background-color | Background color of item tag | $white
+$timeline-tag-border | Size and default color of item tag | .1em solid $grey-light
+$timeline-line | Line style of the timeline | .1em solid $grey-light
+$timeline-content-padding | Content padding for items spacing | 1em 0 0 2em
 
 Demo
 ---
