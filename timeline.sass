@@ -3,10 +3,11 @@ $timeline-tag-border: .1em solid $grey-light !default
 $timeline-line: .1rem solid $grey-light !default
 $timeline-content-padding: 1em 0 0 2em !default
 $timeline-icon-size: $size-5 !default
+$timeline-header-width: 4em
 
 .timeline
   .timeline-header
-    width: 6em
+    width: $timeline-header-width
     text-align: center
   .timeline-item
     display: flex
@@ -14,7 +15,7 @@ $timeline-icon-size: $size-5 !default
     display: -webkit-flex
     position: relative
     border-left: $timeline-line
-    margin-left: 3em
+    margin-left: calc( #{$timeline-header-width} / 2 )
     padding-bottom: 2em
     &::before
       background: $timeline-tag-background-color
