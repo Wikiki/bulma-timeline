@@ -19,7 +19,7 @@ Usage
     </div>
   </li>
   <li class="timeline-item is-danger">
-    <div class="timeline-tag is-icon">
+    <div class="timeline-tag">
       <figure class="image is-32x32">
         <img src="http://bulma.io/images/placeholders/32x32.png">
       </figure>
