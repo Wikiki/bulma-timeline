@@ -3,7 +3,8 @@ $timeline-tag-border: .1em solid $grey-light !default
 $timeline-line: .1rem solid $grey-light !default
 $timeline-content-padding: 1em 0 0 2em !default
 $timeline-icon-size: $size-5 !default
-$timeline-header-width: 4em
+$timeline-header-width: 4em !default
+$dimensions: 16 24 32 48 64 96 128 !default
 
 .timeline
   .timeline-header
@@ -36,9 +37,11 @@ $timeline-header-width: 4em
       height: .8em
       top: 1.2em
       .image
-        width: 32px
-        height: 32px
-        left: -12px
+        @each $dimension in $dimensions
+          &.is-#{$dimension}x#{$dimension}
+            height: $dimension * 1px
+            width: $dimension * 1px
+            left: ( ( $dimension / 2 ) - 4 ) * -1px
         background: $timeline-tag-background-color
         border: $timeline-tag-border
         border-radius: 100%
