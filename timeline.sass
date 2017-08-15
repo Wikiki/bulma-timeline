@@ -1,5 +1,5 @@
-$timeline-tag-background-color: $white !default
-$timeline-tag-border: .1em solid $grey-light !default
+$timeline-marker-background-color: $white !default
+$timeline-marker-border: .1em solid $grey-light !default
 $timeline-line: .1rem solid $grey-light !default
 $timeline-content-padding: 1em 0 0 2em !default
 $timeline-icon-size: $size-5 !default
@@ -19,8 +19,8 @@ $dimensions: 16 24 32 48 64 96 128 !default
     margin-left: calc( #{$timeline-header-width} / 2 )
     padding-bottom: 2em
     &::before
-      background: $timeline-tag-background-color
-      border: $timeline-tag-border
+      background: $timeline-marker-background-color
+      border: $timeline-marker-border
       border-radius: 100%
       content: ""
       display: block
@@ -30,7 +30,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
       top: 1.2rem
       width: .8rem
 
-    .timeline-tag
+    .timeline-marker
       position: absolute
       width: .8em
       left: -.4em
@@ -42,8 +42,8 @@ $dimensions: 16 24 32 48 64 96 128 !default
             height: $dimension * 1px
             width: $dimension * 1px
             left: ( ( $dimension / 2 ) - 4 ) * -1px
-        background: $timeline-tag-background-color
-        border: $timeline-tag-border
+        background: $timeline-marker-background-color
+        border: $timeline-marker-border
         border-radius: 100%
         display: block
         overflow: hidden
@@ -60,6 +60,6 @@ $dimensions: 16 24 32 48 64 96 128 !default
         border-left-color: $color
         &::before
           border-color: $color !important
-        .timeline-tag
+        .timeline-marker
           .image
             border-color: $color !important
