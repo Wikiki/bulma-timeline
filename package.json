@@ -1,0 +1,26 @@
+{
+  "name": "bulma-timeline",
+  "version": "0.0.1",
+  "description": "Display a vertical timeline, in different colors, sizes, and states ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wikiki/bulma-badge.git"
+  },
+  "keywords": [
+    "Bulma",
+    "bulma",
+    "bulma.io",
+    "extensions",
+    "timeline"
+  ],
+  "author": "Wikiki <wikiki@protonmail.com> (https://wikiki.github.io/bulma-extensions/overview)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wikiki/bulma-badge/issues"
+  },
+  "homepage": "https://github.com/Wikiki/bulma-badge#readme"
+}
