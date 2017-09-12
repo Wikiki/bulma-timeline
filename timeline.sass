@@ -1,7 +1,6 @@
-$timeline-marker-background-color: $white !default
-$timeline-marker-color: $grey-light !default
-$timeline-marker-border: .1em solid $grey-light !default
-$timeline-line: .1rem solid $grey-light !default
+$timeline-marker-color: $grey-lighter !default
+$timeline-marker-border: .1em solid $timeline-marker-color !default
+$timeline-line: .1rem solid $grey-lighter !default
 $timeline-content-padding: 1em 0 0 2em !default
 $timeline-icon-size: $size-small !default
 $timeline-header-width: 4em !default
@@ -19,8 +18,10 @@ $dimensions: 16 24 32 48 64 96 128 !default
     border-left: $timeline-line
     margin-left: calc( #{$timeline-header-width} / 2 )
     padding-bottom: 2em
-    &::before
-      background: $timeline-marker-background-color
+
+    .timeline-marker
+      position: absolute
+      background: $timeline-marker-color
       border: $timeline-marker-border
       border-radius: 100%
       content: ""
@@ -30,20 +31,13 @@ $dimensions: 16 24 32 48 64 96 128 !default
       position: absolute
       top: 1.2rem
       width: .8rem
-
-    .timeline-marker
-      position: absolute
-      width: .8em
-      left: -.4em
-      height: .8em
-      top: 1.2em
-      .image
+      &.is-image
         @each $dimension in $dimensions
           &.is-#{$dimension}x#{$dimension}
             height: $dimension * 1px
             width: $dimension * 1px
-            left: ( ( $dimension / 2 ) - 4 ) * -.9px
-        background: $timeline-marker-background-color
+            left: ( $dimension / 2 ) * -1px
+        background: $timeline-marker-color
         border: $timeline-marker-border
         border-radius: 100%
         display: block
@@ -53,12 +47,42 @@ $dimensions: 16 24 32 48 64 96 128 !default
         width: 1.5rem
         left: -.8rem
         padding: $timeline-icon-size / 3
-        background: $timeline-marker-background-color
+        background: $timeline-marker-color
         border: $timeline-marker-border
         border-radius: 100%
         > i
-          color: $timeline-marker-color
+          color: $white
           font-size: $timeline-icon-size !important
+      &.is-outlined
+        .image
+          background: $white
+        &.is-icon
+          background: $white
+          > i
+            color: $timeline-marker-color
+      @each $name, $pair in $colors
+        $color: nth($pair, 1)
+        $color-invert: nth($pair, 2)
+        &.is-#{$name}
+          background-color: $color !important
+          border-color: $color !important
+          .image
+            border-color: $color !important
+
+          &.is-icon
+            background-color: $color !important
+            border-color: $color !important
+            > i
+              color: $color-invert !important
+          &.is-outlined
+            background-color: $white !important
+            border-color: $color !important
+            .image
+              background-color: $white !important
+            &.is-icon
+              background-color: $white !important
+              > i
+                color: $color !important
     .timeline-content
       padding: 1em 0 0 .5em
       padding: $timeline-content-padding
@@ -70,13 +94,3 @@ $dimensions: 16 24 32 48 64 96 128 !default
       $color-invert: nth($pair, 2)
       &.is-#{$name}
         border-left-color: $color
-        &::before
-          border-color: $color !important
-        .timeline-marker
-          .image
-            border-color: $color !important
-
-          &.is-icon
-            border-color: $color !important
-            > i
-              color: $color !important
