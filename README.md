@@ -11,3 +11,8 @@ Bulma's extension to display a timeline
 Documentation & Demo
 ---
 You can find the Documentation and a demo [here](https://wikiki.github.io/bulma-extensions/timeline)
+
+
+RTL Version By Gabriel Michaeli @RuinSain
+---
+My Github [here](https://github.com/RuinSain)
