@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Wikiki/bulma-badge.git"
+    "url": "git+https://github.com/Wikiki/bulma-timeline"
   },
   "keywords": [
     "Bulma",
@@ -20,7 +20,7 @@
   "author": "Wikiki <wikiki@protonmail.com> (https://wikiki.github.io/bulma-extensions/overview)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Wikiki/bulma-badge/issues"
+    "url": "https://github.com/Wikiki/bulma-timeline/issues"
   },
-  "homepage": "https://github.com/Wikiki/bulma-badge#readme"
+  "homepage": "https://github.com/Wikiki/bulma-timeline#readme"
 }
