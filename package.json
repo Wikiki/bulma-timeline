@@ -2,7 +2,7 @@
   "name": "bulma-timeline",
   "version": "0.0.4",
   "description": "Display a vertical timeline, in different colors, sizes, and states ",
-  "main": "index.js",
+  "main": "timeline.sass",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
