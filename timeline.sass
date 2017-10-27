@@ -1,23 +1,40 @@
 $timeline-marker-color: $grey-lighter !default
 $timeline-marker-border: .1em solid $timeline-marker-color !default
-$timeline-line: .1rem solid $grey-lighter !default
+$timeline-line-color: $grey-lighter !default
+$timeline-line-width: .1rem !default
+$timeline-line-style: solid !default
+$timeline-line: $timeline-line-width $timeline-line-style $timeline-line-color !default
 $timeline-content-padding: 1em 0 0 2em !default
+$timeline-rtl-content-padding: 1em 2em 0 0 !default
 $timeline-icon-size: $size-small !default
 $timeline-header-width: 4em !default
 $dimensions: 16 24 32 48 64 96 128 !default
 
 .timeline
+  display: flex
+  flex-direction: column
   .timeline-header
     width: $timeline-header-width
+    min-width: $timeline-header-width
     text-align: center
+    display: flex
+    justify-content: center
   .timeline-item
     display: flex
     display: -ms-flexbox
     display: -webkit-flex
     position: relative
-    border-left: $timeline-line
-    margin-left: calc( #{$timeline-header-width} / 2 )
+    margin-left: calc(#{$timeline-header-width} / 2)
     padding-bottom: 2em
+    &::before
+      content: ""
+      background-color: $timeline-line-color
+      display: block
+      width: $timeline-line-width
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
 
     .timeline-marker
       position: absolute
@@ -27,7 +44,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
       content: ""
       display: block
       height: .8rem
-      left: -.45em
+      left: -0.35em
       position: absolute
       top: 1.2rem
       width: .8rem
@@ -45,7 +62,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
       &.is-icon
         height: 1.5rem
         width: 1.5rem
-        left: -.8rem
+        left: -.7rem
         line-height: .75rem
         padding: $timeline-icon-size / 3
         background: $timeline-marker-color
@@ -95,3 +112,68 @@ $dimensions: 16 24 32 48 64 96 128 !default
       $color-invert: nth($pair, 2)
       &.is-#{$name}
         border-left-color: $color
+
+  &.is-centered
+    .timeline-header
+      display: flex
+      width: 100%
+      justify-content: center
+    .timeline-item
+      width: 50%
+      &:nth-of-type(2n)
+        margin-left: 0
+        margin-right: calc(#{$timeline-header-width} / 2)
+        &::before
+          right: 0
+          left: auto
+        .timeline-marker
+          left: auto
+          right: -0.35em
+          &.is-image
+            @each $dimension in $dimensions
+              &.is-#{$dimension}x#{$dimension}
+                left: auto
+                right: ( $dimension / 2 ) * -1px
+          &.is-icon
+            left: auto
+            right: -.8rem
+        .timeline-content
+          padding: $timeline-rtl-content-padding
+          text-align: right
+      &:nth-of-type(2n+1)
+        align-self: flex-end
+        &::before
+          content: ""
+          background-color: $timeline-line-color
+          display: block
+          width: $timeline-line-width
+          height: 100%
+          position: absolute
+          left: -.1em
+          top: 0
+
+  &.is-rtl
+    justify-content: flex-end
+    align-items: flex-end
+    .timeline-item
+      justify-content: flex-end
+      border-left: none
+      &::before
+        right: 0
+        left: auto
+      margin-left: 0
+      margin-right: calc(#{$timeline-header-width} / 2)
+      .timeline-marker
+        left: auto
+        right: -.45em
+        &.is-image
+          @each $dimension in $dimensions
+            &.is-#{$dimension}x#{$dimension}
+              left: auto
+              right: ( $dimension / 2 ) * -1px
+        &.is-icon
+          left: auto
+          right: -.8rem
+      .timeline-content
+        padding: $timeline-rtl-content-padding
+        text-align: right
