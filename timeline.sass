@@ -19,6 +19,8 @@ $dimensions: 16 24 32 48 64 96 128 !default
   .timeline-header
     width: $timeline-header-width
     min-width: $timeline-header-width
+    max-width: $timeline-header-width * 2
+    word-wrap: normal
     text-align: center
     display: flex
     justify-content: center
@@ -47,7 +49,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
       content: ""
       display: block
       height: $timeline-marker-size
-      left: -($timeline-marker-size / 2) + ($timeline-marker-border-size / 2)
+      left: -(($timeline-marker-size / 2) - $timeline-marker-border-size / 2)
       position: absolute
       top: 1.2rem
       width: $timeline-marker-size
@@ -65,7 +67,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
       &.is-icon
         height: $timeline-marker-icon-size
         width: $timeline-marker-icon-size
-        left: -($timeline-marker-icon-size / 2) + ($timeline-marker-border-size / 2)
+        left: -(($timeline-marker-icon-size / 2) - $timeline-marker-border-size / 2)
         line-height: .75rem
         padding: $timeline-icon-size / 3
         background: $timeline-marker-color
@@ -120,19 +122,20 @@ $dimensions: 16 24 32 48 64 96 128 !default
     .timeline-header
       display: flex
       width: 100%
-      justify-content: center
+      align-self: center
     .timeline-item
       width: 50%
-      justify-content: flex-end
+      align-self: flex-end
       &:nth-of-type(2n)
+        align-self: flex-start
         margin-left: 0
         margin-right: $timeline-header-width / 2
         &::before
-          right: 0
+          right: -.1em
           left: auto
         .timeline-marker
           left: auto
-          right: -($timeline-marker-size / 2) + ($timeline-marker-border-size / 2)
+          right: -(($timeline-marker-size / 2) - $timeline-marker-border-size / 2)
           &.is-image
             @each $dimension in $dimensions
               &.is-#{$dimension}x#{$dimension}
@@ -140,12 +143,11 @@ $dimensions: 16 24 32 48 64 96 128 !default
                 right: ( $dimension / 2 ) * -1px
           &.is-icon
             left: auto
-            right: -($timeline-marker-icon-size / 2) + ($timeline-marker-border-size / 2)
+            right: -(($timeline-marker-icon-size / 2) - $timeline-marker-border-size / 2)
         .timeline-content
           padding: $timeline-rtl-content-padding
           text-align: right
       &:nth-of-type(2n+1)
-        align-self: flex-end
         &::before
           content: ""
           background-color: $timeline-line-color
@@ -153,7 +155,6 @@ $dimensions: 16 24 32 48 64 96 128 !default
           width: $timeline-line-width
           height: 100%
           position: absolute
-          left: -.1em
           top: 0
 
   &.is-rtl
@@ -169,7 +170,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
       margin-right: $timeline-header-width / 2
       .timeline-marker
         left: auto
-        right: -($timeline-marker-size / 2) + ($timeline-marker-border-size / 2)
+        right: -(($timeline-marker-size / 2) - $timeline-marker-border-size / 2)
         &.is-image
           @each $dimension in $dimensions
             &.is-#{$dimension}x#{$dimension}
@@ -177,7 +178,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
               right: ( $dimension / 2 ) * -1px
         &.is-icon
           left: auto
-          right: -($timeline-marker-icon-size / 2) + ($timeline-marker-border-size / 2)
+          right: -(($timeline-marker-icon-size / 2) - $timeline-marker-border-size / 2)
       .timeline-content
         padding: $timeline-rtl-content-padding
         text-align: right
