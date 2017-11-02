@@ -135,7 +135,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
           left: auto
         .timeline-marker
           left: auto
-          right: -(($timeline-marker-size / 2) - $timeline-marker-border-size / 2)
+          right: -(($timeline-marker-size / 2) - $timeline-marker-border-size / 2) - .1em
           &.is-image
             @each $dimension in $dimensions
               &.is-#{$dimension}x#{$dimension}
@@ -143,7 +143,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
                 right: ( $dimension / 2 ) * -1px
           &.is-icon
             left: auto
-            right: -(($timeline-marker-icon-size / 2) - $timeline-marker-border-size / 2)
+            right: -(($timeline-marker-icon-size / 2) - $timeline-marker-border-size / 2) - .1em
         .timeline-content
           padding: $timeline-rtl-content-padding
           text-align: right
