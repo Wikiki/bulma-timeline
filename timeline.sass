@@ -147,6 +147,10 @@ $dimensions: 16 24 32 48 64 96 128 !default
         .timeline-content
           padding: $timeline-rtl-content-padding
           text-align: right
+          display: flex
+          flex-direction: column
+          align-items: flex-end
+          flex-basis: 100%
       &:nth-of-type(2n+1)
         &::before
           content: ""
