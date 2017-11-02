@@ -116,7 +116,8 @@ $dimensions: 16 24 32 48 64 96 128 !default
       $color: nth($pair, 1)
       $color-invert: nth($pair, 2)
       &.is-#{$name}
-        border-left-color: $color
+        &:before
+          border-left-color: $color
 
   &.is-centered
     .timeline-header
