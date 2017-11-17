@@ -10,4 +10,4 @@ Bulma's extension to display a timeline
 
 Documentation & Demo
 ---
-You can find the Documentation and a demo [here](https://wikiki.github.io/bulma-extensions/timeline)
+You can find the Documentation and a demo [here](https://wikiki.github.io/components/timeline/)
