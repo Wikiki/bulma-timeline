@@ -1,0 +1,24 @@
+{
+  "name": "bulma-timeline",
+  "description": "Display a vertical timeline, in different colors, sizes, and states",
+  "main": "timeline.sass",
+  "authors": [
+    "Wikiki <wikiki@protonmail.com> (https://wikiki.github.io/bulma-extensions/overview)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Bulma",
+    "bulma",
+    "bulma.io",
+    "extensions",
+    "timeline"
+  ],
+  "homepage": "https://github.com/Wikiki/bulma-timeline",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
