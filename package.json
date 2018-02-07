@@ -1,6 +1,6 @@
 {
   "name": "bulma-timeline",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Display a vertical timeline, in different colors, sizes, and states ",
   "main": "timeline.sass",
   "scripts": {
@@ -23,13 +23,28 @@
     "url": "https://github.com/Wikiki/bulma-timeline/issues"
   },
   "homepage": "https://github.com/Wikiki/bulma-timeline#readme",
+  "scripts": {
+    "build": "gulp"
+  },
   "devDependencies": {
-    "bulma": "^0.6.1"
+    "@babel/core": "^7.0.0-beta.39",
+    "@babel/preset-env": "^7.0.0-beta.39",
+    "babel-core": "^7.0.0-beta.3",
+    "bulma": "^0.6.2",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1"
   },
   "files": [
-    "timeline.sass",
-    "bulma-timeline.css",
-    "bulma-timeline.min.css",
+    "dist/timeline.sass",
+    "dist/bulma-timeline.min.css",
     "LICENSE",
     "README.md"
   ]
