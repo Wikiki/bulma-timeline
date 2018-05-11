@@ -18,7 +18,6 @@ var postcss                     = require('gulp-postcss');
 var rollup                      = require('gulp-better-rollup');
 var runSequence                 = require('run-sequence');
 var sass                        = require('gulp-sass');
-var sourcemaps                  = require('gulp-sourcemaps');
 var spawn                       = require('child_process').spawn;
 var minify                      = require('gulp-babel-minify');
 
@@ -49,17 +48,19 @@ var distJsFile     = package.name + '.min.js';
 
  // Uses Sass compiler to process styles, adds vendor prefixes, minifies, then
  // outputs file to the appropriate location.
- gulp.task('build:styles', ['build:styles:copy'], function() {
-   return gulp.src([paths.bulma + bulmaSassFile, paths.src + mainSassFile])
-     .pipe(concat(globalSassFile))
-     .pipe(sass({
-       style: 'compressed',
-       includePaths: [paths.bulma]
-     }))
-     .pipe(concat(distCssFile))
-     .pipe(postcss([autoprefixer({browsers: ['last 2 versions']})]))
-     .pipe(cleancss())
-     .pipe(gulp.dest(paths.dest));
+ gulp.task('build:styles', function() {
+   runSequence('build:styles:copy',function() {
+     return gulp.src([paths.bulma + bulmaSassFile, paths.src + mainSassFile])
+       .pipe(concat(globalSassFile))
+       .pipe(sass({
+         style: 'compressed',
+         includePaths: [paths.bulma]
+       }))
+       .pipe(postcss([autoprefixer({browsers: ['last 2 versions']})]))
+       .pipe(cleancss())
+       .pipe(concat(distCssFile))
+       .pipe(gulp.dest(paths.dest));
+   });
  });
 
  // Copy original sass file to dist
@@ -69,12 +70,11 @@ var distJsFile     = package.name + '.min.js';
      .pipe(gulp.dest(paths.dest));
  });
 
-gulp.task('clean:styles', function(callback) {
+gulp.task('clean:styles', function() {
   del([
     paths.dest + mainSassFile,
     paths.dest + distCssFile
   ]);
-  callback();
 });
 
 /**
@@ -87,51 +87,47 @@ gulp.task('clean:styles', function(callback) {
 // appropriate location.
 gulp.task('build:scripts', function() {
   return gulp
-    .src([paths.src + paths.jsPattern])
-    .pipe(sourcemaps.init({
-      loadMaps: true
-    }))
+    .src([paths.src + mainJsFile])
     .pipe(rollup({
         plugins: [babel({
           babelrc: false,
-          sourceMaps: true,
+          sourceMaps: false,
           exclude: 'node_modules/**',
           presets: [
             ["@babel/preset-env",  {
               "modules": false,
               "targets": {
-                "browsers": gutil.env.babelTarget ? gutil.env.babelTarget : ["last 2 versions"]
+                "browsers": gutil.env.babelTarget ? gutil.env.babelTarget : ['last 2 versions']
               }
             }]
           ]
         })]
       }, {
-        format: gutil.env.jsFormat ? gutil.env.jsFormat : 'iife',
+        format: 'umd',
         name: camelCase(package.name)
       }
-    ))
+    ).on('error', function(err) {
+      gutil.log(gutil.colors.red('[Error]'), err.toString())
+    }))
     .pipe(concat(globalJsFile))
     .pipe(gulp.dest(paths.dest))
     .pipe(concat(distJsFile))
     .pipe(minify().on('error', function(err) {
       gutil.log(gutil.colors.red('[Error]'), err.toString())
     }))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dest));
 });
 
-gulp.task('clean:scripts', function(callback) {
+gulp.task('clean:scripts', function() {
   del([
     paths.dest + mainJsFile,
     paths.dest + distJsFile
   ]);
-  callback();
 });
 
 // Deletes the entire dist directory.
-gulp.task('clean', ['clean:scripts', 'clean:styles'], function(callback) {
+gulp.task('clean', function() {
   del(paths.dest);
-  callback();
 });
 
 /**

@@ -66,6 +66,9 @@ $dimensions: 16 24 32 48 64 96 128 !default
         display: block
         overflow: hidden
       &.is-icon
+        display: flex
+        align-items: center
+        justify-content: center
         height: $timeline-marker-icon-size
         width: $timeline-marker-icon-size
         left: -(($timeline-marker-icon-size / 2) - $timeline-marker-border-size / 2)
@@ -162,6 +165,12 @@ $dimensions: 16 24 32 48 64 96 128 !default
           height: 100%
           position: absolute
           top: 0
+      @each $name, $pair in $colors
+        $color: nth($pair, 1)
+        $color-invert: nth($pair, 2)
+        &.is-#{$name}
+          &::before
+            background-color: $color
 
   &.is-rtl
     justify-content: flex-end
