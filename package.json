@@ -1,6 +1,6 @@
 {
   "name": "bulma-timeline",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Display a vertical timeline, in different colors, sizes, and states ",
   "main": "dist/bulma-timeline.sass",
   "scripts": {
