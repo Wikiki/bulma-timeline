@@ -1,10 +1,13 @@
 {
   "name": "bulma-timeline",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "Display a vertical timeline, in different colors, sizes, and states ",
-  "main": "dist/bulma-timeline.sass",
+  "main": "./dist/css/bulma-timeline.min.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp",
+    "commit": "git-cz",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -23,38 +26,43 @@
     "url": "https://github.com/Wikiki/bulma-timeline/issues"
   },
   "homepage": "https://github.com/Wikiki/bulma-timeline#readme",
-  "scripts": {
-    "build": "gulp"
-  },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.39",
-    "@babel/preset-env": "^7.0.0-beta.39",
-    "babel-core": "^7.0.0-beta.3",
-    "bulma": "^0.6.2",
-    "camelcase": "^4.1.0",
-    "conventional-github-releaser": "^2.0.0",
+    "ansi-colors": "^2.0.1",
+    "autoprefixer": "^8.6.2",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "bulma": "^0.7.1",
+    "camelcase": "^5.0.0",
+    "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-babel": "^7.0.1",
-    "gulp-babel-minify": "^0.3.0",
-    "gulp-better-rollup": "^3.0.0",
-    "gulp-bump": "^3.1.0",
-    "gulp-clean-css": "^3.9.2",
+    "fancy-log": "^1.3.2",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
-    "gulp-conventional-changelog": "^1.1.11",
-    "gulp-git": "^2.5.1",
+    "gulp-nop": "0.0.3",
     "gulp-postcss": "^7.0.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
-    "rollup-plugin-babel": "^3.0.3",
-    "run-sequence": "^2.2.1"
+    "jest": "^23.1.0",
+    "regenerator-runtime": "^0.11.1",
+    "semantic-release": "^15.5.2",
+    "travis-deploy-once": "^5.0.0",
+    "webpack": "^4.12.0",
+    "webpack-stream": "^4.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "files": [
-    "dist/bulma-timeline.sass",
-    "dist/bulma-timeline.min.css",
+    "dist/**",
+    "src/**",
     "LICENSE",
     "README.md"
   ]
