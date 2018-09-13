@@ -197,3 +197,13 @@ $dimensions: 16 24 32 48 64 96 128 !default
       .timeline-content
         padding: $timeline-rtl-content-padding
         text-align: right
+
+  &.no-headers
+    .timeline-item
+      &.is-first
+        &::before
+          height: calc(100% - 1.2rem)
+          top: 1.2rem
+      &.is-last
+        &::before
+          height: 1.2rem
