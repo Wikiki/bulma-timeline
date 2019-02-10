@@ -1,0 +1,14 @@
+# Variables
+title:         "Timeline"
+description:   "Responsive - Timeline"
+version:       3.0.1
+url:           https://demo.creativebulma.net/components/timeline/
+
+# Build
+markdown:      kramdown
+permalink:     pretty
+includes:      ['assets/css', 'assets/js']
+exclude:       ['package.json']
+sass:
+  sass_dir:    _sass
+  style:       compressed
