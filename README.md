@@ -6,7 +6,7 @@ Bulma's extension to display a timeline
 [![npm](https://img.shields.io/npm/dm/bulma-timeline.svg)](https://www.npmjs.com/package/bulma-timeline)
 [![Build Status](https://travis-ci.org/Wikiki/bulma-timeline.svg?branch=master)](https://travis-ci.org/Wikiki/bulma-timeline)
 
-<img src="https://img4.hostingpics.net/pics/887099ScreenShot20170812at150229.png" width="50%">
+<img src="https://i.ibb.co/S0QDCg9/Screenshot-2019-02-10-at-13-21-15.png" width="50%">
 
 Documentation & Demo
 ---
