@@ -2,7 +2,8 @@
   "name": "bulma-timeline",
   "version": "3.0.1",
   "description": "Display a vertical timeline, in different colors, sizes, and states ",
-  "main": "./dist/css/bulma-timeline.min.css",
+  "style": "dist/css/bulma-timeline.css",
+  "sass": "src/sass/index.sass",
   "scripts": {
     "build": "gulp",
     "commit": "git-cz",
