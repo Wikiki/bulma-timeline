@@ -11,7 +11,7 @@ $timeline-content-padding: 1em 0 0 2em !default
 $timeline-rtl-content-padding: 1em 2em 0 0 !default
 $timeline-icon-size: .75rem !default
 $timeline-header-width: 4em !default
-$timeline-item-padding-left: $timeline-header-width / 2 !default
+$timeline-item-padding-left: $timeline-header-width * 0.5 !default
 $timeline-item-padding-bottom: 2em !default
 $dimensions: 16 24 32 48 64 96 128 !default
 
@@ -40,7 +40,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
       width: $timeline-line-width
       height: 100%
       position: absolute
-      left: -($timeline-line-width / 2)
+      left: -($timeline-line-width * 0.5)
       top: 0
 
     .timeline-marker
@@ -133,7 +133,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
         margin-left: 0
         margin-right: $timeline-item-padding-left
         &::before
-          right: -($timeline-line-width / 2)
+          right: -($timeline-line-width * 0.5)
           left: auto
         .timeline-marker
           transform: translateX(50%)
@@ -171,7 +171,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
         right: 0
         left: auto
       margin-left: 0
-      margin-right: $timeline-header-width / 2
+      margin-right: $timeline-header-width * 0.5
       .timeline-marker
         transform: translateX(50%)
         &.is-image
