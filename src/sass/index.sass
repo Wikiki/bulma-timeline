@@ -184,10 +184,10 @@ $dimensions: 16 24 32 48 64 96 128 !default
 
   &.no-headers
     .timeline-item
-      &.is-first
+      &:first-child
         &::before
           height: calc(100% - 1.2rem)
           top: 1.2rem
-      &.is-last
+      &:last-child
         &::before
           height: 1.2rem
