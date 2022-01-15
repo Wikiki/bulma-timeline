@@ -16,7 +16,7 @@ const log = require('fancy-log');
 const nop = require('gulp-nop');
 const postcss = require('gulp-postcss');
 const run = require('gulp-run');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
 
 /**
@@ -140,7 +140,7 @@ gulp.task('build:scripts', function () {
 						options: {
 							babelrc: './babelrc'
 						}
-					}, ],
+					},],
 				}
 			}), webpack)
 			.pipe(concat(config.javascript.output.filename + '.js'))
