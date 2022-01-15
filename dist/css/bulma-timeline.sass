@@ -1,3 +1,5 @@
+@use "sass:math"
+
 $timeline-marker-size: .8em !default
 $timeline-marker-color: $grey-lighter !default
 $timeline-marker-icon-size: 1.5em !default
@@ -11,7 +13,7 @@ $timeline-content-padding: 1em 0 0 2em !default
 $timeline-rtl-content-padding: 1em 2em 0 0 !default
 $timeline-icon-size: $size-small !default
 $timeline-header-width: 4em !default
-$timeline-item-padding-left: $timeline-header-width / 2 !default
+$timeline-item-padding-left: math.div($timeline-header-width, 2) !default
 $timeline-item-padding-bottom: 2em !default
 $dimensions: 16 24 32 48 64 96 128 !default
 
@@ -51,7 +53,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
       content: ""
       display: block
       height: $timeline-marker-size
-      left: -(($timeline-marker-size / 2) - $timeline-marker-border-size / 2)
+      left: -(math.div($timeline-marker-size, 2) - math.div($timeline-marker-border-size, 2))
       top: 1.2rem
       width: $timeline-marker-size
       &.is-image
@@ -59,7 +61,7 @@ $dimensions: 16 24 32 48 64 96 128 !default
           &.is-#{$dimension}x#{$dimension}
             height: $dimension * 1px
             width: $dimension * 1px
-            left: ( $dimension / 2 ) * -1px
+            left: math.div($dimension, 2) * -1px
         background: $timeline-marker-color
         border: $timeline-marker-border
         border-radius: 100%
@@ -71,9 +73,8 @@ $dimensions: 16 24 32 48 64 96 128 !default
         justify-content: center
         height: $timeline-marker-icon-size
         width: $timeline-marker-icon-size
-        left: -(($timeline-marker-icon-size / 2) - $timeline-marker-border-size / 2)
+        left: -(math.div($timeline-marker-icon-size, 2) - math.div($timeline-marker-border-size, 2))
         line-height: .75rem
-        // padding: $timeline-icon-size / 3
         background: $timeline-marker-color
         border: $timeline-marker-border
         border-radius: 100%
@@ -134,21 +135,21 @@ $dimensions: 16 24 32 48 64 96 128 !default
       &:nth-of-type(2n)
         align-self: flex-start
         margin-left: 0
-        margin-right: $timeline-header-width / 2
+        margin-right: math.div($timeline-header-width, 2)
         &::before
           right: -$timeline-line-width
           left: auto
         .timeline-marker
           left: auto
-          right: -(($timeline-marker-size / 2) - $timeline-marker-border-size / 2) - $timeline-line-width
+          right: -(math.div($timeline-marker-size, 2) - math.div($timeline-marker-border-size, 2)) - $timeline-line-width
           &.is-image
             @each $dimension in $dimensions
               &.is-#{$dimension}x#{$dimension}
                 left: auto
-                right: ( $dimension / 2 ) * -1px
+                right: math.div($dimension, 2) * -1px
           &.is-icon
             left: auto
-            right: -(($timeline-marker-icon-size / 2) - $timeline-marker-border-size / 2) - $timeline-line-width
+            right: -(math.div($timeline-marker-icon-size, 2) - math.div($timeline-marker-border-size, 2)) - $timeline-line-width
         .timeline-content
           padding: $timeline-rtl-content-padding
           text-align: right
@@ -182,18 +183,18 @@ $dimensions: 16 24 32 48 64 96 128 !default
         right: 0
         left: auto
       margin-left: 0
-      margin-right: $timeline-header-width / 2
+      margin-right: math.div($timeline-header-width, 2)
       .timeline-marker
         left: auto
-        right: -(($timeline-marker-size / 2) - $timeline-marker-border-size / 2)
+        right: -(math.div($timeline-marker-size, 2) - math.div($timeline-marker-border-size, 2))
         &.is-image
           @each $dimension in $dimensions
             &.is-#{$dimension}x#{$dimension}
               left: auto
-              right: ( $dimension / 2 ) * -1px
+              right: math.div($dimension, 2) * -1px
         &.is-icon
           left: auto
-          right: -(($timeline-marker-icon-size / 2) - $timeline-marker-border-size / 2)
+          right: -(math.div($timeline-marker-icon-size, 2) - math.div($timeline-marker-border-size, 2))
       .timeline-content
         padding: $timeline-rtl-content-padding
         text-align: right
