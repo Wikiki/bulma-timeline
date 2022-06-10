@@ -57,7 +57,7 @@
     "jest": "^27.4.7",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.48.0",
-    "semantic-release": "^18.0.1",
+    "semantic-release": "^19.0.3",
     "webpack": "^5.66.0",
     "webpack-stream": "^7.0.0"
   },
